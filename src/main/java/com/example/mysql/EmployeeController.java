@@ -18,6 +18,11 @@ public String test()
 {
 	return "this is default test";
 }
+	@RequestMapping("/all")
+	{
+		return erepo.findAll();
+	}
+	
 @RequestMapping("/save")
 public Employee save(@RequestBody Employee employee)
 {
