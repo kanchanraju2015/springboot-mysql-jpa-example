@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.*;
 @RestController
 public class EmployeeController
 {
@@ -19,6 +20,7 @@ public String test()
 	return "this is default test";
 }
 	@RequestMapping("/all")
+	public List<Employee> allemployees()
 	{
 		return erepo.findAll();
 	}
