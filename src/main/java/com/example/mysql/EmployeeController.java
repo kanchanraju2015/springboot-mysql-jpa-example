@@ -24,6 +24,11 @@ public String test()
 	{
 		return erepo.findAll();
 	}
+	@RequestMapping("/by/{name}")
+	public Employee byname(@PathVariable String name)
+	{
+	return erepo.findByName(name);
+	}
 	
 @RequestMapping("/save")
 public Employee save(@RequestBody Employee employee)
