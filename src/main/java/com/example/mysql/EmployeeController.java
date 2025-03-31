@@ -35,7 +35,11 @@ public String test()
 	{
 	return erepo.findByCity(city);
 	}
-	
+	@RequestMapping("/{name}/{city}")
+	public List<Employee> bynameandcity(@PathVariable String name,@PathVariable String city)
+	{
+		return erepo.findByNameAndCity(name, city);
+	}
 	
 	
 @RequestMapping("/save")
