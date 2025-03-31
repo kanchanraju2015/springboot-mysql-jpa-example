@@ -4,6 +4,7 @@ import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -18,14 +19,10 @@ public String test()
 	return "this is default test";
 }
 @RequestMapping("/save")
-public Employee save()
+public Employee save(@RequestBody Employee employee)
 {
-	Employee e=new Employee();
-	e.setAge(34);
-	e.setCity("ramgarh");
-	e.setCountry("india");
-	e.setName("anuj kumar");
-	return erepo.save(e);
+	
+	return erepo.save(employee);
 }
 @RequestMapping("/del/{id}")
 public String del(@PathVariable int id)
