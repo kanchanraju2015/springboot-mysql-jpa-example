@@ -54,7 +54,7 @@ public String del(@PathVariable int id)
 	erepo.deleteById(id);
 	return "data deleted";
 }
-@RequestMapping("/{id}")
+@RequestMapping("/{id}")// this is find by id method call
 public Optional<Employee> byid(@PathVariable int id)
 {
 	return erepo.findById(id);
