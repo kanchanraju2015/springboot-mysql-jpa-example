@@ -48,6 +48,14 @@ public Employee save(@RequestBody Employee employee)
 	
 	return erepo.save(employee);
 }
+@RequestMapping("/update/{id}")
+public Employee upd(@PathVariable int id,@RequestBody Employee employee)
+{
+	Employee e=erepo.findById(id).get();
+	e.setName(employee.getName());
+	return erepo.save(e);
+				
+}
 @RequestMapping("/del/{id}")
 public String del(@PathVariable int id)
 {

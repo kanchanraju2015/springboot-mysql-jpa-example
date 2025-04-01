@@ -1,11 +1,16 @@
 package com.example.mysql;
 
+import org.hibernate.annotations.DynamicInsert;
+import org.hibernate.annotations.DynamicUpdate;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
 @Entity
+@DynamicInsert
+@DynamicUpdate
 public class Employee 
 {
 @Id
