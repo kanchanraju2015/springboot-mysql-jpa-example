@@ -56,7 +56,7 @@ public Employee upd(@PathVariable int id,@RequestBody Employee employee)
 	return erepo.save(e);
 				
 }
-@RequestMapping("/del/{id}")
+@RequestMapping("/del/{id}")// this is delete by id example
 public String del(@PathVariable int id)
 {
 	erepo.deleteById(id);
