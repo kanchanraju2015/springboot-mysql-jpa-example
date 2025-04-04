@@ -9,4 +9,5 @@ public interface EmployeeRepository extends JpaRepository<Employee,Integer>
 Employee findByName(String name);
 List<Employee> findByCity(String city);
 List<Employee> findByNameAndCity(String name,String city);
+//Employee deleteByName(String name); this is not required
 }
