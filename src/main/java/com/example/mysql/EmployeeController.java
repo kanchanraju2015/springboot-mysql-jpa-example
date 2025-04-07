@@ -41,7 +41,7 @@ public String test()
 		return erepo.findByNameAndCity(name, city);
 	}
 	
-	
+	// saving data to the database  
 @RequestMapping("/save")
 public Employee save(@RequestBody Employee employee)
 {
